@@ -32,6 +32,8 @@ export default {
   text-align: left;
 
   .footer-main {
+    position: relative;
+
     a {
       text-decoration: none;
       color: unset;
@@ -39,7 +41,7 @@ export default {
       .icon-i {
         vertical-align: bottom;
         font-size: 24px;
-        margin-right 4px
+        margin-right: 4px;
       }
     }
 
@@ -49,8 +51,9 @@ export default {
 
     .logo {
       height: 48px;
-      float: right;
-      margin-left: 12px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
   }
 

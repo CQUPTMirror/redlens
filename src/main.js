@@ -23,6 +23,8 @@ Vue.component(Icon.name, Icon)
 Vue.use(VueClipboard)
 Vue.config.productionTip = false
 
+
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')

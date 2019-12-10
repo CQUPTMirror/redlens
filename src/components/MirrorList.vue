@@ -12,7 +12,6 @@
         ></MirrorCard>
       </a-col>
     </a-row>
-
   </div>
 </template>
 
@@ -23,17 +22,19 @@ export default {
   name: "MirrorList",
   data() {
     return {
-      mirrorData: [],
+      mirrorData: []
     };
   },
   components: {
     MirrorCard
   },
   mounted() {
-    this.$axios.get(`${window.location.origin}/static/tunasync.json`).then(resp => {
-      this.mirrorData = resp.data;
-      window.console.log(this.mirrorData);
-    });
+    this.$axios
+      .get(`${window.location.origin}/static/tunasync.json`)
+      .then(resp => {
+        this.mirrorData = resp.data;
+        window.console.log(this.mirrorData);
+      });
   }
 };
 </script>
@@ -48,5 +49,10 @@ export default {
   border: none;
   margin-bottom: 32px;
   height: 144px;
+}
+@media (max-width: 576px) {
+  .ant-col-xs-24 {
+    padding: 0 !important;
+  }
 }
 </style>

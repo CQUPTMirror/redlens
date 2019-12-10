@@ -15,7 +15,10 @@
       </div>
       <div class="detail-left">
         <span class="title">{{name}}</span>
-        <span class="update">最后更新：{{lastUpdate.replace(' +0800','')}}</span>
+        <span class="update">
+          <span class="lastUpdate">最后更新：</span>
+          {{lastUpdate.replace(' +0800','')}}
+        </span>
       </div>
     </div>
     <div class="detail">
@@ -167,6 +170,10 @@ export default {
     opacity: 0;
     transform-style: ease-in;
     transition-duration: 0.4s;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 
   .title {
@@ -175,6 +182,13 @@ export default {
     font-weight: bold;
     transform-style: ease-in;
     transition-duration: 0.4s;
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+     @media (max-width: 375px) {
+      font-size: 18px;
+    }
   }
 
   &:hover {
@@ -211,6 +225,12 @@ export default {
 
   .iconfont {
     transition: 0.4s all;
+  }
+
+  .lastUpdate {
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 
   .icon {

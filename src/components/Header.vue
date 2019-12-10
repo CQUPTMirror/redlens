@@ -15,27 +15,32 @@ export default {
 };
 </script>
 
-<style scoped>
-h2 {
-  margin: 0;
-    font-weight: bold;
-}
-
+<style lang="stylus" scoped>
 .header-wrapper {
-  height: 60px;
   box-shadow: violet;
-}
 
-.logo {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
+  .logo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
-  justify-content: center;
-}
+    @media (max-width: 375px) {
+      flex-wrap: wrap;
+    }
 
-.header-logo-pic {
-  height: 100%;
-  margin-right: 10px;
+    .header-logo-pic {
+      height: 60px;
+      margin-right: 10px;
+
+      @media (max-width: 375px) {
+        margin-right: 0;
+      }
+    }
+
+    h2 {
+      margin: 10px 0 0 0;
+      font-weight: bold;
+    }
+  }
 }
 </style>

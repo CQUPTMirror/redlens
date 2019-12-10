@@ -1,24 +1,11 @@
-# cqupt-mirror
+# redlens
+The (test) front end of [CQUPT Mirror](http://mirror.cqupt.edu.cn/). For now, it just parses `tunasync.json` and shows information.
 
-## Project setup
-```
-yarn install
-```
+## todos
+- Render the how-to markdown files in a dialog/modal.
+- ...
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## links
+[How-to](https://github.com/CQUPTMirror/cqupt-mirrors-howto)
+[Report](https://github.com/CQUPTMirror/Report)
+[News](https://github.com/CQUPTMirror/MirrorsNews)

@@ -20,6 +20,13 @@
       "unicode_decimal": 59034
     },
     {
+      "icon_id": "2774257",
+      "name": "Mirror",
+      "font_class": "mirror",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
       "icon_id": "3876432",
       "name": "archlinux",
       "font_class": "archlinux",
@@ -60,6 +67,20 @@
       "font_class": "ziyuan",
       "unicode": "e603",
       "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12385602",
+      "name": "anaconda",
+      "font_class": "anaconda",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "12385728",
+      "name": "epel",
+      "font_class": "epel",
+      "unicode": "e608",
+      "unicode_decimal": 58888
     }
   ]
 }

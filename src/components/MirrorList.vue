@@ -1,9 +1,8 @@
 <template>
   <div class="mirror-list">
     <a-row :gutter="32">
-      <a-col v-for="item in mirrorData" :key="item.value" :xs="24" :lg="12">
+      <a-col v-for="item in mirrorDataFilter" :key="item.value" :xs="24" :lg="12">
         <MirrorCard
-          v-if="item.status!=='paused'"
           class="mirror-card"
           :name="item.name"
           :lastUpdate="item.last_update"
@@ -28,9 +27,22 @@ export default {
   components: {
     MirrorCard
   },
+  computed: {
+    mirrorDataFilter() {
+      return this.mirrorData.filter(
+        value => value.is_master && value.status !== "paused"
+      );
+    }
+  },
   mounted() {
     this.$axios
-      .get(`${window.location.origin}/static/tunasync.json`)
+      .get(
+        `${
+          process.env.NODE_ENV === "production"
+            ? window.location.origin
+            : "http://mirror.cqupt.edu.cn"
+        }/static/tunasync.json`
+      )
       .then(resp => {
         this.mirrorData = resp.data;
         window.console.log(this.mirrorData);

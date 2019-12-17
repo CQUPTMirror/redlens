@@ -9,20 +9,25 @@
       <div class="icon">
         <i
           class="iconfont"
-          :class="infoMap[name]['icon']"
-          :style="isMouseOver?{color:infoMap[name]['fill']}:{}"
+          :class="infoMap[name]['icon']||'icon-mirror'"
+          :style="isMouseOver?{color:infoMap[name]['fill']||'#000'}:{}"
         ></i>
+
       </div>
       <div class="detail-left">
         <span class="title">{{name}}</span>
-        <span class="update">
+        <span class="update" v-if="lastUpdate.indexOf('0001')===-1">
           <span class="lastUpdate">最后更新：</span>
           {{lastUpdate.replace(' +0800','')}}
+        </span>
+        <span class="update" v-else>
+          <span class="lastUpdate">初次同步中...</span>
         </span>
       </div>
     </div>
     <div class="detail">
-      <span class="size-num">{{size}}</span>
+      <span class="size-num" v-if="size!=='unknown'">{{size}}</span>
+      <span class="size-num" v-else></span>
       <a-icon
         id="i-howto"
         v-if="infoMap[name]['help']!==undefined"
@@ -37,7 +42,7 @@
       <a-icon class="icon-i" v-else-if="status=='syncing'" type="sync" spin />
       <a-icon class="icon-i" v-else type="question-circle" />
 
-      <a-tooltip trigger="click" title="已复制">
+      <a-tooltip trigger="click" title="已复制源地址">
         <a-icon
           id="i-copy"
           v-clipboard:copy="sUrl"
@@ -64,6 +69,10 @@ export default {
       isMouseOver: false,
       isModalVisible: false,
       infoMap: {
+        anaconda: {
+          icon: "icon-anaconda",
+          fill: "#3faf4b"
+        },
         archlinux: {
           icon: "icon-archlinux",
           help: "archlinux-mirror-howto.md",
@@ -72,7 +81,6 @@ export default {
         archlinuxcn: {
           icon: "icon-archlinux",
           help: "archlinuxcn-mirror-howto.md",
-
           fill: "#1793d1"
         },
         centos: {
@@ -88,13 +96,11 @@ export default {
         "debian-security": {
           icon: "icon-debian",
           help: "debian-mirror-howto.md",
-
           fill: "#d70751"
         },
         "debian-cd": {
           icon: "icon-debian",
           help: "debian-mirror-howto.md",
-
           fill: "#d70751"
         },
         "deepin-cd": {
@@ -104,6 +110,12 @@ export default {
         deepin: {
           icon: "icon-deepin",
           fill: "#31bff7"
+        },
+        epel: {
+          icon: "icon-epel",
+          fill: "#d70751"
+        },
+        elrepo: {
         },
         kali: {
           icon: "icon-kali",
@@ -146,7 +158,6 @@ export default {
     },
     copy: function() {
       event.stopPropagation();
-      // alert("已复制源地址到剪贴板");
     }
   }
 };
@@ -186,7 +197,8 @@ export default {
     @media (max-width: 576px) {
       font-size: 20px;
     }
-     @media (max-width: 375px) {
+
+    @media (max-width: 375px) {
       font-size: 18px;
     }
   }

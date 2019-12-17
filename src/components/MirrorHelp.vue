@@ -10,11 +10,11 @@ export default {
     return { md: String };
   },
   mounted() {
-    this.$axios
-      .get("http://mirrors.cqupt.edu.cn/static/howto/centos-mirror-howto.md")
-      .then(resp => {
-        this.md = resp.data;
-      });
+    // this.$axios
+    //   .get("http://mirrors.cqupt.edu.cn/static/howto/centos-mirror-howto.md")
+    //   .then(resp => {
+    //     this.md = resp.data;
+    //   });
   }
 };
 </script>

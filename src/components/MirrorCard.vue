@@ -56,6 +56,7 @@
 </template>
 
 <script>
+import { MirrorDetail } from "../assets/MirrorDetail.json"
 export default {
   name: "MirrorCard",
   props: {
@@ -68,82 +69,7 @@ export default {
     return {
       isMouseOver: false,
       isModalVisible: false,
-      infoMap: {
-        anaconda: {
-          icon: "icon-anaconda",
-          fill: "#3faf4b"
-        },
-        archlinux: {
-          icon: "icon-archlinux",
-          help: "archlinux-mirror-howto.md",
-          fill: "#1793d1"
-        },
-        archlinuxcn: {
-          icon: "icon-archlinux",
-          help: "archlinuxcn-mirror-howto.md",
-          fill: "#1793d1"
-        },
-        centos: {
-          icon: "icon-centos",
-          help: "centos-mirror-howto.md",
-          fill: "#95267c"
-        },
-        debian: {
-          icon: "icon-debian",
-          help: "debian-mirror-howto.md",
-          fill: "#d70751"
-        },
-        "debian-security": {
-          icon: "icon-debian",
-          help: "debian-mirror-howto.md",
-          fill: "#d70751"
-        },
-        "debian-cd": {
-          icon: "icon-debian",
-          help: "debian-mirror-howto.md",
-          fill: "#d70751"
-        },
-        "deepin-cd": {
-          icon: "icon-deepin",
-          fill: "#31bff7"
-        },
-        deepin: {
-          icon: "icon-deepin",
-          fill: "#31bff7"
-        },
-        epel: {
-          icon: "icon-epel",
-          fill: "#d70751"
-        },
-        elrepo: {
-        },
-        kali: {
-          icon: "icon-kali",
-          fill: "#4f7992"
-        },
-        "kali-images": {
-          icon: "icon-kali",
-          fill: "#4f7992"
-        },
-        "lxc-images": {
-          icon: "icon-ziyuan",
-          fill: "#313131"
-        },
-        ubuntu: {
-          icon: "icon-ubuntu",
-          help: "ubuntu-mirror-howto.md",
-          fill: "#d64613"
-        },
-        "ubuntu-releases": {
-          icon: "icon-ubuntu",
-          help: "ubuntu-mirror-howto.md",
-          fill: "#d64613"
-        },
-        raspberrypi: {
-          icon: "icon-raspberry",
-          fill: "#b61040"
-        }
-      },
+      infoMap: MirrorDetail,
       sUrl: `${window.location.href}${this.name}/`
     };
   },
@@ -152,7 +78,7 @@ export default {
       window.location.href = this.sUrl;
     },
     jumpHelpUrl: function() {
-      window.location.href = `${window.location.origin}/static/howto/${
+      window.location.href = `${window.location.origin}/docs/#/mirror/${
         this.infoMap[this.name]["help"]
       }`;
     },

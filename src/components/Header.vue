@@ -6,18 +6,39 @@
         <h2>重庆邮电大学开源镜像站</h2>
       </div>
     </div>
+    <Bar class="bar"></Bar>
   </div>
 </template>
 
 <script>
+import Bar from "./Bar.vue";
+
 export default {
-  name: "Header"
+  name: "Header",
+  components: {
+    Bar
+  }
 };
 </script>
 
 <style lang="stylus" scoped>
+
 .header-wrapper {
   box-shadow: violet;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar {
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
+  }
 
   .logo {
     display: flex;

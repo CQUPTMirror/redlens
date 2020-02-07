@@ -6,7 +6,6 @@
     <div class="main-wrapper">
       <MirrorList></MirrorList>
     </div>
-    <MirrorHelp hidden></MirrorHelp>
     <Footer></Footer>
   </div>
 </template>
@@ -15,14 +14,12 @@
 import Header from "./components/Header.vue";
 import MirrorList from "./components/MirrorList.vue";
 import Footer from "./components/Footer.vue";
-import MirrorHelp from "./components/MirrorHelp.vue";
 export default {
   name: "app",
   components: {
     Header,
     MirrorList,
-    Footer,
-    MirrorHelp
+    Footer
   }
 };
 </script>
@@ -41,8 +38,7 @@ export default {
 
 #header {
   width: 100%;
-
-  padding: 36px 24px 24px 24px;
+  padding: 36px 96px 24px 96px;
 }
 
 .main-wrapper {
@@ -53,5 +49,15 @@ export default {
   .main-wrapper {
     padding: 24px 24px;
   }
+  
+  #header {
+    padding: 36px 24px 24px 24px;
+  }
 }
+
+@media (max-width: 768px) {
+    #header {
+    padding: 36px 24px 0px 24px;
+  }
+  }
 </style>

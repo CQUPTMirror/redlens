@@ -4,7 +4,10 @@
       <p>
         <span>本开源镜像源由</span>
         <a class="xxbnb" href="http://xxb.cqupt.edu.cn">重庆邮电大学信息与网络管理中心</a>
-        <span>提供支持，<br>由</span>
+        <span>
+          提供支持，
+          <br />由
+        </span>
         <a class="xxbnb" href="https://hongyan.cqupt.edu.cn/aboutus">红岩网校工作站运维安全部/CQUPT-LUG</a>
         <span>维护。</span>
         <img class="logo" src="../assets/lug-logo.svg" alt="CQUPT-LUG" />
@@ -13,7 +16,7 @@
       <span>联系我们：</span>
       <a href="https://github.com/CQUPTMirror/">
         <a-icon class="icon-i" type="github" width="100" />
-        <span>Github</span>
+        <span>GitHub</span>
       </a>
     </div>
   </div>
@@ -27,40 +30,36 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.footer-wrapper {
+.footer-wrapper
   padding: 2em 96px;
   text-align: left;
 
-  .footer-main {
+  .footer-main
     position: relative;
 
-    a {
+    a
       text-decoration: none;
       color: unset;
 
-      .icon-i {
+      .icon-i
         vertical-align: bottom;
         font-size: 24px;
         margin-right: 4px;
-      }
-    }
 
-    .xxbnb {
+    .xxbnb
       font-weight: bold;
-    }
 
-    .logo {
+    .logo
       height: 48px;
       position: absolute;
       right: 0;
       bottom: 0;
-    }
-  }
 
-  @media screen and (max-width: 1200px) {
-    & {
+  @media screen and (max-width: 1200px)
+    &
       padding: 2em 24px;
-    }
-  }
-}
+
+@media (prefers-color-scheme: dark)
+  .logo
+    display: none;
 </style>

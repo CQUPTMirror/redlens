@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Tooltop from 'ant-design-vue/lib/tooltip'
-import Card from 'ant-design-vue/lib/card'
 import Row from 'ant-design-vue/lib/row'
 import Col from 'ant-design-vue/lib/col'
 import Icon from 'ant-design-vue/lib/icon'
@@ -13,7 +12,6 @@ import VueClipboard from 'vue-clipboard2'
 import './assets/linuxicon/iconfont.css'
 
 Vue.prototype.$axios = axios;
-Vue.component(Card.name, Card);
 Vue.component(Tooltop.name, Tooltop);
 Vue.component(Row.name, Row)
 Vue.component(Col.name, Col)

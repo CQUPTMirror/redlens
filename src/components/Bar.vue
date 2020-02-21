@@ -14,7 +14,6 @@ export default {
 
 <style lang="stylus" scoped>
 .bar-wrapper .btn {
-  color: #242525;
   font-size: 16px;
   margin: 0 5px;
 }

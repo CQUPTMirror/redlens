@@ -1,6 +1,6 @@
 <template>
-  <a-card
-    hoverable
+  <div
+    class="card-body"
     @click="openSourceUrl"
     @mouseover="isMouseOver=true"
     @mouseleave="isMouseOver=false"
@@ -12,7 +12,6 @@
           :class="infoMap[name]['icon']||'icon-mirror'"
           :style="isMouseOver?{color:infoMap[name]['fill']||'#000'}:{}"
         ></i>
-
       </div>
       <div class="detail-left">
         <span class="title">{{name}}</span>
@@ -52,11 +51,11 @@
         />
       </a-tooltip>
     </div>
-  </a-card>
+  </div>
 </template>
 
 <script>
-import { MirrorDetail } from "../assets/MirrorDetail.json"
+import { MirrorDetail } from "../assets/MirrorDetail.json";
 export default {
   name: "MirrorCard",
   props: {
@@ -89,89 +88,80 @@ export default {
 };
 </script>
 
-<style lang="stylus" scope>
-.ant-card-body {
+<style lang="stylus" scoped>
+
+.card-body
+  cursor: pointer;
+  padding: 24px;
   height: 100%;
   display: flex;
   align-items: center;
 
-  .update {
+  &:hover
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+
+  .update
     transform: translateY(10px);
     opacity: 0;
     transform-style: ease-in;
     transition-duration: 0.4s;
-  }
 
-  .size-num {
+  .size-num
     transform: translateX(10px);
     opacity: 0;
     transform-style: ease-in;
     transition-duration: 0.4s;
 
-    @media (max-width: 576px) {
+    @media (max-width: 576px)
       display: none;
-    }
-  }
 
-  .title {
+  .title
     transform: translateY(10px);
     font-size: 24px;
     font-weight: bold;
     transform-style: ease-in;
     transition-duration: 0.4s;
 
-    @media (max-width: 576px) {
+    @media (max-width: 576px)
       font-size: 20px;
-    }
 
-    @media (max-width: 375px) {
+    @media (max-width: 375px)
       font-size: 18px;
-    }
-  }
 
-  &:hover {
-    .size-num, .update {
+  &:hover
+    .size-num, .update
       transform: translateY(0) translateX(0);
       transition-delay: 0.2s;
       transform-style: ease-in;
       transition-duration: 0.4s;
       opacity: 1;
-    }
 
-    .title {
+    .title
       transform: translateY(0px);
       transition: all 0.4s;
-    }
 
-    .icon-i {
+    .icon-i
       transition: all 0.2s;
       opacity: 0;
-    }
 
-    #i-copy, #i-howto {
+    #i-copy, #i-howto
       transform: translateX(0);
       transition: all 0.2s;
       opacity: 1;
-    }
-  }
-}
 
-.brief {
+.brief
   display: flex;
   align-items: center;
   flex-grow: 1;
 
-  .iconfont {
+  .iconfont
     transition: 0.4s all;
-  }
 
-  .lastUpdate {
-    @media (max-width: 576px) {
+  .lastUpdate
+    @media (max-width: 576px)
       display: none;
-    }
-  }
 
-  .icon {
+  .icon
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,48 +170,38 @@ export default {
     border-radius: 50%;
     margin-right: 24px;
 
-    // background-color: #f6ffed;
-    i {
+    i
       font-size: 48px;
-    }
-  }
 
-  .detail-left {
+  .detail-left
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-}
 
-.detail {
+.detail
   display: flex;
   position: relative;
 
-  .size-num {
+  .size-num
     font-size: 16px;
     line-height: 32px;
     margin-right: 8px;
-  }
 
-  .icon-i {
+  .icon-i
     color: '#52c41a';
     transition: all 0.2s;
     font-size: 32px;
-  }
 
-  #i-howto {
+  #i-howto
     transition: all 0.2s;
     margin-right: 0.2em;
     transform: translateX(10px);
     opacity: 0;
-  }
 
-  #i-copy {
+  #i-copy
     position: absolute;
     transition: all 0.2s;
     opacity: 0;
     z-index: 1;
     right: 0;
-  }
-}
 </style>

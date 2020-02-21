@@ -2,13 +2,15 @@
   <div class="mirror-list">
     <a-row :gutter="32">
       <a-col v-for="item in mirrorDataFilter" :key="item.value" :xs="24" :lg="12">
-        <MirrorCard
-          class="mirror-card"
-          :name="item.name"
-          :lastUpdate="item.last_update"
-          :status="item.status"
-          :size="item.size"
-        ></MirrorCard>
+        <div class="mirror-card">
+          <MirrorCard
+            class="mirror-card"
+            :name="item.name"
+            :lastUpdate="item.last_update"
+            :status="item.status"
+            :size="item.size"
+          ></MirrorCard>
+        </div>
       </a-col>
     </a-row>
   </div>
@@ -51,20 +53,27 @@ export default {
 };
 </script>
 
-<style scoped>
-.mirror-list {
+<style lang="stylus" scoped>
+@import '../assets/theme/normal.styl';
+
+.mirror-card
+  background-color: $float-bg;
+
+.mirror-list
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-}
-.mirror-card {
+
+.mirror-card
   border: none;
   margin-bottom: 32px;
   height: 144px;
-}
-@media (max-width: 576px) {
-  .ant-col-xs-24 {
+
+@media (max-width: 576px)
+  .ant-col-xs-24
     padding: 0 !important;
-  }
-}
+
+@media (prefers-color-scheme: dark)
+  .mirror-card
+    background-color: $float-bg-dark;
 </style>

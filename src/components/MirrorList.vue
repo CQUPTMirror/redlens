@@ -62,7 +62,7 @@ export default {
       )
       .then(resp => {
         this.mirrorData = resp.data;
-        window.console.log(this.mirrorData);
+        // window.console.log(this.mirrorData);
       })
     this.$axios
       .get(
@@ -74,7 +74,7 @@ export default {
       )
       .then(resp => {
         this.proxyData = resp.data;
-        window.console.log(this.proxyData);
+        // window.console.log(this.proxyData);
       });
   },
   mounted() {
@@ -82,7 +82,7 @@ export default {
 
     EventBus.$on('listUpdateMsg', (choice) => {
           this.choice = choice
-          window.console.log(this.choice)
+          // window.console.log(this.choice)
       })
   }
 };

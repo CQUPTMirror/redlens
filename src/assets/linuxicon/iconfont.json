@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15378715",
+      "name": "pypi",
+      "font_class": "pypi",
+      "unicode": "ec65",
+      "unicode_decimal": 60517
+    },
+    {
+      "icon_id": "15591654",
+      "name": "npmjs-fill",
+      "font_class": "npm",
+      "unicode": "e982",
+      "unicode_decimal": 59778
+    },
+    {
+      "icon_id": "12385728",
+      "name": "epel",
+      "font_class": "epel",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "12385602",
+      "name": "anaconda",
+      "font_class": "anaconda",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "2774257",
+      "name": "Mirror",
+      "font_class": "mirror",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "11349833",
+      "name": "raspberry",
+      "font_class": "raspberry",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
       "icon_id": "273141",
       "name": "linux-deepin",
       "font_class": "deepin",
@@ -18,13 +60,6 @@
       "font_class": "centos",
       "unicode": "e69a",
       "unicode_decimal": 59034
-    },
-    {
-      "icon_id": "2774257",
-      "name": "Mirror",
-      "font_class": "mirror",
-      "unicode": "e616",
-      "unicode_decimal": 58902
     },
     {
       "icon_id": "3876432",
@@ -48,13 +83,6 @@
       "unicode_decimal": 58880
     },
     {
-      "icon_id": "11349833",
-      "name": "raspberry",
-      "font_class": "raspberry",
-      "unicode": "e645",
-      "unicode_decimal": 58949
-    },
-    {
       "icon_id": "12085761",
       "name": "kali-linux",
       "font_class": "kali",
@@ -67,20 +95,6 @@
       "font_class": "ziyuan",
       "unicode": "e603",
       "unicode_decimal": 58883
-    },
-    {
-      "icon_id": "12385602",
-      "name": "anaconda",
-      "font_class": "anaconda",
-      "unicode": "e607",
-      "unicode_decimal": 58887
-    },
-    {
-      "icon_id": "12385728",
-      "name": "epel",
-      "font_class": "epel",
-      "unicode": "e608",
-      "unicode_decimal": 58888
     }
   ]
 }

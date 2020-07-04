@@ -79,6 +79,14 @@
         "raspberrypi": {
             "icon": "icon-raspberry",
             "fill": "#b61040"
+        },
+        "npm":{
+            "icon": "icon-npm",
+            "fill": "#c00714"
+        },
+        "pypi":{
+            "icon": "icon-pypi",
+            "fill": "#c00714"
         }
     }
 }

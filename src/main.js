@@ -11,6 +11,8 @@ import VueClipboard from 'vue-clipboard2'
 
 import './assets/linuxicon/iconfont.css'
 
+export const EventBus = new Vue()
+
 Vue.prototype.$axios = axios;
 Vue.component(Tooltop.name, Tooltop);
 Vue.component(Row.name, Row)

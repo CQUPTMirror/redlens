@@ -15,7 +15,7 @@
       </div>
       <div class="detail-left">
         <span class="title">{{name}}</span>
-        <span class="update" v-if="lastUpdate.indexOf('0001')===-1">
+        <span class="update" v-if="lastUpdate && lastUpdate.indexOf('0001')===-1">
           <span class="lastUpdate">最后更新：</span>
           {{lastUpdate.replace(' +0800','')}}
         </span>
@@ -59,6 +59,7 @@ import { MirrorDetail } from "../assets/MirrorDetail.json";
 export default {
   name: "MirrorCard",
   props: {
+    type: Number,
     lastUpdate: String,
     status: String,
     size: String,

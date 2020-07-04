@@ -24,15 +24,6 @@
           ></MirrorCard>
         </div>
       </a-col>
-      <a-col v-for="item in proxyData" :key="item.value" :xs="24" :lg="12">
-        <div class="mirror-card">
-          <MirrorCard
-            class="mirror-card"
-            :type="choice"
-            :name="item.name"
-          ></MirrorCard>
-        </div>
-      </a-col>
     </a-row>
   </div>
 </template>
@@ -102,11 +93,6 @@ export default {
 
 .mirror-card
   background-color: $float-bg;
-
-.mirror-list
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 
 .mirror-card
   border: none;

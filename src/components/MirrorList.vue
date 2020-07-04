@@ -24,15 +24,6 @@
           ></MirrorCard>
         </div>
       </a-col>
-      <a-col v-for="item in proxyData" :key="item.value" :xs="24" :lg="12">
-        <div class="mirror-card">
-          <MirrorCard
-            class="mirror-card"
-            :type="choice"
-            :name="item.name"
-          ></MirrorCard>
-        </div>
-      </a-col>
     </a-row>
   </div>
 </template>
@@ -71,7 +62,7 @@ export default {
       )
       .then(resp => {
         this.mirrorData = resp.data;
-        window.console.log(this.mirrorData);
+        // window.console.log(this.mirrorData);
       })
     this.$axios
       .get(
@@ -83,7 +74,7 @@ export default {
       )
       .then(resp => {
         this.proxyData = resp.data;
-        window.console.log(this.proxyData);
+        // window.console.log(this.proxyData);
       });
   },
   mounted() {
@@ -91,7 +82,7 @@ export default {
 
     EventBus.$on('listUpdateMsg', (choice) => {
           this.choice = choice
-          window.console.log(this.choice)
+          // window.console.log(this.choice)
       })
   }
 };
@@ -102,11 +93,6 @@ export default {
 
 .mirror-card
   background-color: $float-bg;
-
-.mirror-list
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 
 .mirror-card
   border: none;

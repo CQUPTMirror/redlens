@@ -27,7 +27,8 @@ export default {
 <style lang="stylus">
 // @media (prefers-color-scheme: light)
 @import 'assets/theme/normal.styl';
-
+body
+  background-color #f4f6f9
 #app
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: $main-bg;

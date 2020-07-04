@@ -21,6 +21,7 @@
             class="mirror-card"
             :type="choice"
             :name="item.name"
+            :upstream="item.upstream"
           ></MirrorCard>
         </div>
       </a-col>

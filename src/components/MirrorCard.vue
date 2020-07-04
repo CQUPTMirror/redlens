@@ -19,6 +19,9 @@
           <span class="lastUpdate">最后更新：</span>
           {{lastUpdate.replace(' +0800','')}}
         </span>
+        <span class="update" v-else-if="upstream">
+          <span class="lastUpdate">{{upstream}}</span>
+        </span>
         <span class="update" v-else>
           <span class="lastUpdate">初次同步中...</span>
         </span>
@@ -61,6 +64,7 @@ export default {
   props: {
     type: Number,
     lastUpdate: String,
+    upstream: String,
     status: String,
     size: String,
     name: String
@@ -78,7 +82,7 @@ export default {
       window.location.href = this.sUrl;
     },
     jumpHelpUrl: function() {
-      window.location.href = `${window.location.origin}/docs/#/mirror/${
+      window.location.href = `${window.location.origin}/docs/#/${this.type==1?'mirror':'proxy'}/${
         this.infoMap[this.name]["help"]
       }`;
     },

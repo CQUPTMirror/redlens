@@ -82,11 +82,13 @@
         },
         "npm":{
             "icon": "icon-npm",
+            "help": "npm-mirror-howto",
             "fill": "#c00714"
         },
         "pypi":{
             "icon": "icon-pypi",
-            "fill": "#c00714"
+            "help": "pypi-mirror-howto",
+            "fill": "#4277a6"
         }
     }
 }

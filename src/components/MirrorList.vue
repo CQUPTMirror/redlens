@@ -67,9 +67,18 @@ export default {
             : baseURL
         }/static/tunasync.json`
       )
+      .catch(err =>{
+        console.log(err)
+        this.mirrorData = [
+          {"name":"ubuntu","is_master":true,"status":"success","last_update":"2020-07-22 01:15:17 +0800","last_update_ts":1595351717,"last_started":"2020-07-21 22:09:24 +0800","last_started_ts":1595340564,"last_ended":"2020-07-22 01:15:17 +0800","last_ended_ts":1595351717,"next_schedule":"2020-07-22 07:15:17 +0800","next_schedule_ts":1595373317,"upstream":"rsync://archive.ubuntu.com/ubuntu/","size":"1.41T"},
+          {"name":"pypi","is_master":true,"status":"syncing","last_update":"2020-07-21 19:06:25 +0800","last_update_ts":1595329585,"last_started":"2020-07-21 19:11:29 +0800","last_started_ts":1595329889,"last_ended":"2020-07-21 19:06:25 +0800","last_ended_ts":1595329585,"next_schedule":"0001-01-01 00:00:00 +0000","next_schedule_ts":-62135596800,"upstream":"https://pypi.python.org/","size":"7.17T"},
+          {"name":"centos","is_master":true,"status":"success","last_update":"2020-07-21 23:51:03 +0800","last_update_ts":1595346663,"last_started":"2020-07-21 23:39:39 +0800","last_started_ts":1595345979,"last_ended":"2020-07-21 23:51:03 +0800","last_ended_ts":1595346663,"next_schedule":"2020-07-22 05:51:03 +0800","next_schedule_ts":1595368263,"upstream":"rsync://msync.centos.org/CentOS/","size":"300G"}
+          ]
+      })
       .then(resp => {
         this.mirrorData = resp.data;
       })
+     
     this.$axios
       .get(
         `${

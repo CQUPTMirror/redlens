@@ -28,7 +28,7 @@ export default {
 // @media (prefers-color-scheme: light)
 @import 'assets/theme/normal.styl';
 body
-  background-color #f4f6f9
+  background-color $main-bg
 #app
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: $main-bg;
@@ -46,6 +46,9 @@ body, h2, a
 .main-wrapper
   padding: 24px 96px;
 
+.iconfont
+  filter brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(3250%) hue-rotate(251deg) brightness(89%) contrast(97%);
+
 @media screen and (max-width: 1200px)
   .main-wrapper
     padding: 24px 24px;
@@ -61,6 +64,9 @@ body, h2, a
   body, h2, a
     color: $main-font-dark;
 
-  #app
+  .iconfont
+    filter brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(554%) hue-rotate(23deg) brightness(112%) contrast(75%)
+
+  body, #app
     background-color: $main-bg-dark;
 </style>

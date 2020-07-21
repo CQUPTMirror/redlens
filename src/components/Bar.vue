@@ -19,8 +19,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bar-wrapper .btn 
-  font-size 16px
-  margin 0 5px
+@import '../assets/theme/normal.styl';
+.bar-wrapper 
+  .btn 
+    font-size 16px
+    margin 0 5px
+  
+  a:hover
+    color $accent
 
 </style>

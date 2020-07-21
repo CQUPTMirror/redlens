@@ -7,11 +7,13 @@
   >
     <div class="brief">
       <div class="icon">
-        <i
+        <svg
           class="iconfont"
           :class="infoMap[name]['icon']||'icon-mirror'"
-          :style="isMouseOver?{color:infoMap[name]['fill']||'#000'}:{}"
-        ></i>
+          :style="isMouseOver?{filter:'unset'}:{}"
+        >
+        <use :xlink:href="'#'+infoMap[name]['icon']||'#icon-mirror'"></use>
+        </svg>
       </div>
       <div class="detail-left">
         <span class="title">{{name}}</span>
@@ -161,6 +163,10 @@ export default {
   flex-grow: 1;
 
   .iconfont
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    width 75%
     transition: 0.4s all;
 
   .lastUpdate

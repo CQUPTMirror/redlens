@@ -7,7 +7,8 @@ import 'ant-design-vue/dist/antd.css'
 import App from './App.vue'
 import VueClipboard from 'vue-clipboard2'
 
-import './assets/linuxicon/iconfont.css'
+// import './assets/icon/iconfont.css'
+import './assets/icon/iconfont.js'
 
 export const EventBus = new Vue()
 

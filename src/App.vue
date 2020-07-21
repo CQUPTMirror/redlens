@@ -30,11 +30,18 @@ export default {
 body
   background-color $main-bg
 #app
+  display flex
+  flex-direction column
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: $main-bg;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  height 100vh
+
+  .main-wrapper
+    padding: 24px 96px;
+    flex 1
 
 body, h2, a
   color: $main-font;
@@ -43,8 +50,7 @@ body, h2, a
   width: 100%;
   padding: 36px 96px 24px 96px;
 
-.main-wrapper
-  padding: 24px 96px;
+
 
 .iconfont
   filter brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(3250%) hue-rotate(251deg) brightness(89%) contrast(97%);

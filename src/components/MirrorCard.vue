@@ -16,7 +16,7 @@
       <div class="detail-left">
         <span class="title">{{name}}</span>
         <span class="update" v-if="lastUpdate && lastUpdate.indexOf('0001')===-1">
-          <span class="lastUpdate">最后更新：</span>
+          <span class="lastUpdate" v-if="!isShrinked">最后更新：</span>
           {{lastUpdate.replace(' +0800','')}}
         </span>
         <span class="update" v-else-if="upstream">
@@ -67,7 +67,8 @@ export default {
     upstream: String,
     status: String,
     size: String,
-    name: String
+    name: String,
+    isShrinked: Boolean
   },
   data() {
     return {

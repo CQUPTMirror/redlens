@@ -77,7 +77,7 @@
             "fill": "#d64613"
         },
         "raspberrypi": {
-            "icon": "icon-raspberry",
+            "icon": "icon-raspberrypi",
             "fill": "#b61040"
         },
         "npm":{

@@ -9,10 +9,9 @@
       <div class="icon">
         <svg
           class="iconfont"
-          :class="infoMap[name]['icon']||'icon-mirror'"
           :style="isMouseOver?{filter:'unset'}:{}"
         >
-        <use :xlink:href="'#'+infoMap[name]['icon']||'#icon-mirror'"></use>
+        <use :xlink:href="infoMap[name]['icon']?'#'+infoMap[name]['icon']:'#icon-mirror'"></use>
         </svg>
       </div>
       <div class="detail-left">
@@ -32,28 +31,34 @@
     <div class="detail">
       <span class="size-num" v-if="size!=='unknown'">{{size}}</span>
       <span class="size-num" v-else></span>
-      <a-icon
+      <svg class="iconfont icon-i"
         id="i-howto"
         v-if="infoMap[name]['help']!==undefined"
-        class="icon-i"
-        type="question-circle"
         @click.stop="jumpHelpUrl"
-      />
-      <a-icon class="icon-i" v-if="status=='success'" type="check-circle" width="100" />
-      <a-icon class="icon-i" v-else-if="status=='disabled'" type="minus-circle" />
-      <a-icon class="icon-i" v-else-if="status=='paused'" type="pause-circle" />
-      <a-icon class="icon-i" v-else-if="status=='failed'" type="close-circle" />
-      <a-icon class="icon-i" v-else-if="status=='syncing'" type="sync" spin />
-      <a-icon class="icon-i" v-else type="question-circle" />
-
+      >
+        <use xlink:href="#icon-question-circle-fill"></use>
+      </svg>
+      <svg class="iconfont">
+        <use v-if="status=='success'" xlink:href="#icon-check-circle-fill"></use>
+        <use v-else-if="status=='disabled'" xlink:href="#icon-minus-circle-fill"></use>
+        <use v-else-if="status=='paused'" xlink:href="#icon-pause-circle-fill"></use>
+        <use v-else-if="status=='failed'" xlink:href="#icon-close-circle-fill"></use>
+        <use v-else-if="status=='syncing'" xlink:href="#icon-sync-fill"></use>
+        <use v-else xlink:href="#icon-question-circle-fill"></use>
+      </svg>
       <a-tooltip trigger="click" title="已复制源地址">
-        <a-icon
-          id="i-copy"
-          v-clipboard:copy="sUrl"
-          class="icon-i"
-          type="copy"
+        <div 
+          v-clipboard:copy="genSourceUrl()"
           v-clipboard:success="copy"
-        />
+        >
+          <svg 
+            class="iconfont icon-i"
+            id="i-copy"
+          >
+          <use xlink:href="#icon-file-copy-fill"></use>
+        </svg>
+        </div>
+       
       </a-tooltip>
     </div>
   </div>
@@ -77,12 +82,14 @@ export default {
       isMouseOver: false,
       isModalVisible: false,
       infoMap: MirrorDetail,
-      sUrl: `${window.location.href}${this.name}/`
     };
   },
   methods: {
+    genSourceUrl: function() {
+      return `${window.location.href}${this.name}/`
+    },
     openSourceUrl: function() {
-      window.location.href = this.sUrl;
+      window.location.href = this.genSourceUrl()
     },
     jumpHelpUrl: function() {
       window.location.href = `${window.location.origin}/docs/#/${this.type==1?'mirror':'proxy'}/${
@@ -92,6 +99,10 @@ export default {
     copy: function() {
       event.stopPropagation();
     }
+  },
+
+  mounted() {
+    window.console.log(this)
   }
 };
 </script>
@@ -147,10 +158,9 @@ export default {
     .title
       transform: translateY(0px);
       transition: all 0.4s;
-
-    .icon-i
-      transition: all 0.2s;
-      opacity: 0;
+  
+    .detail .iconfont
+      opacity 0
 
     #i-copy, #i-howto
       transform: translateX(0);
@@ -167,7 +177,6 @@ export default {
     fill: currentColor;
     overflow: hidden;
     width 75%
-    transition: 0.4s all;
 
   .lastUpdate
     @media (max-width: 576px)
@@ -198,6 +207,11 @@ export default {
     font-size: 16px;
     line-height: 32px;
     margin-right: 8px;
+
+  .iconfont
+    width 36px
+    height 36px
+    transition: all 0.2s;
 
   .icon-i
     color: '#52c41a';

@@ -39,10 +39,6 @@ body
   text-align: center;
   height 100vh
 
-  .main-wrapper
-    padding: 24px 96px;
-    flex 1
-
 body, h2, a
   color: $main-font;
 
@@ -50,7 +46,9 @@ body, h2, a
   width: 100%;
   padding: 36px 96px 24px 96px;
 
-
+.main-wrapper
+  padding: 24px 96px;
+  flex 1
 
 .iconfont
   filter brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(3250%) hue-rotate(251deg) brightness(89%) contrast(97%);
@@ -65,6 +63,11 @@ body, h2, a
 @media (max-width: 768px)
   #header
     padding: 36px 24px 0px 24px;
+
+@media (max-width: 375px) 
+  .main-wrapper
+    padding 24px 0  
+
 
 @media (prefers-color-scheme: dark)
   body, h2, a

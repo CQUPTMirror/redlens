@@ -38,13 +38,23 @@
       >
         <use xlink:href="#icon-question-circle-fill"></use>
       </svg>
-      <svg class="iconfont">
-        <use v-if="status=='success'" xlink:href="#icon-check-circle-fill"></use>
-        <use v-else-if="status=='disabled'" xlink:href="#icon-minus-circle-fill"></use>
-        <use v-else-if="status=='paused'" xlink:href="#icon-pause-circle-fill"></use>
-        <use v-else-if="status=='failed'" xlink:href="#icon-close-circle-fill"></use>
-        <use v-else-if="status=='syncing'" xlink:href="#icon-sync-fill"></use>
-        <use v-else xlink:href="#icon-question-circle-fill"></use>
+      <svg v-if="status=='success'" class="iconfont">
+        <use  xlink:href="#icon-check-circle-fill"></use>
+      </svg>
+        <svg v-else-if="status=='disabled'"  class="iconfont">
+        <use xlink:href="#icon-minus-circle-fill"></use>
+        </svg>
+        <svg v-else-if="status=='paused'" class="iconfont">
+        <use xlink:href="#icon-pause-circle-fill"></use>
+        </svg>
+        <svg v-else-if="status=='failed'" class="iconfont">
+        <use  xlink:href="#icon-close-circle-fill"></use>
+        </svg>
+        <svg v-else-if="status=='syncing'" class="iconfont">
+        <use xlink:href="#icon-sync-fill"></use>
+        </svg>
+        <svg v-else class="iconfont rotate">
+        <use xlink:href="#icon-question-circle-fill"></use>
       </svg>
       <a-tooltip trigger="click" title="已复制源地址">
         <div 
@@ -100,14 +110,21 @@ export default {
       event.stopPropagation();
     }
   },
-
-  mounted() {
-    window.console.log(this)
-  }
 };
 </script>
 
 <style lang="stylus" scoped>
+@keyframes rotating {
+  from {
+    transform rotate(0deg)
+  }
+  to {
+    transform rotate(360deg)
+  }
+}
+  
+.rotate
+  animation rotating 2s linear infinite
 
 .card-body
   cursor: pointer;
@@ -172,6 +189,7 @@ export default {
   align-items: center;
   flex-grow: 1;
 
+  
   .iconfont
     vertical-align: -0.15em;
     fill: currentColor;
@@ -202,6 +220,8 @@ export default {
 .detail
   display: flex;
   position: relative;
+
+  
 
   .size-num
     font-size: 16px;

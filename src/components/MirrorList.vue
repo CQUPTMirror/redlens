@@ -118,13 +118,16 @@ export default {
 .mirror-container
   display grid
   grid-template-columns auto auto
-  column-gap 32px
-  row-gap 32px
+  gap 32px 32px
+
+@media (max-width: 1200px)
+  .mirror-container
+    gap 24px 24px
 
 @media (max-width: 991px)
   .mirror-container
     grid-template-columns auto
-    padding: 0 !important;
+    padding: 0 !important
 
 @media (prefers-color-scheme: dark)
   .mirror-card

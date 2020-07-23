@@ -50,10 +50,10 @@
         <svg v-else-if="status=='failed'" class="iconfont">
         <use  xlink:href="#icon-close-circle-fill"></use>
         </svg>
-        <svg v-else-if="status=='syncing'" class="iconfont">
+        <svg v-else-if="status=='syncing'" class="iconfont rotate">
         <use xlink:href="#icon-sync-fill"></use>
         </svg>
-        <svg v-else class="iconfont rotate">
+        <svg v-else class="iconfont">
         <use xlink:href="#icon-question-circle-fill"></use>
       </svg>
       <a-tooltip trigger="click" title="已复制源地址">

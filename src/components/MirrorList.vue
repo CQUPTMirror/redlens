@@ -99,7 +99,7 @@ export default {
     window.addEventListener('resize', this.onResize)
   },
   mounted() {
-    EventBus.$on('listUpdateMsg', (choice) => {
+    EventBus.$on('list-update-msg', (choice) => {
           this.choice = choice
     })
     

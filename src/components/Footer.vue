@@ -5,7 +5,7 @@
         <span>本开源镜像源由</span>
         <a class="xxbnb" href="http://xxb.cqupt.edu.cn">重庆邮电大学信息与网络管理中心</a>
         <span>提供支持，<br />由</span>
-        <a class="xxbnb" href="https://hongyan.cqupt.edu.cn/aboutus">红岩网校工作站运维安全部/CQUPT-LUG</a>
+        <a class="xxbnb" href="https://redrock.team/aboutus">红岩网校工作站运维安全部/CQUPT-LUG</a>
         <span>维护。</span>
         <!-- <img class="logo" src="../assets/lug-logo.svg" alt="CQUPT-LUG" /> -->
         <svg class="iconfont logo">

@@ -11,7 +11,7 @@
           class="iconfont"
           :style="isMouseOver?{filter:'unset'}:{}"
         >
-        <use :xlink:href="infoMap[name]['icon']?'#'+infoMap[name]['icon']:'#icon-mirror'"></use>
+        <use :xlink:href="infoMapAfter[name]['icon']?'#'+infoMapAfter[name]['icon']:type?'#icon-mirror':'#icon-proxy'"></use>
         </svg>
       </div>
       <div class="detail-left">
@@ -21,10 +21,10 @@
           {{lastUpdate.replace(' +0800','')}}
         </span>
         <span class="update" v-else-if="upstream">
-          <span class="lastUpdate">{{upstream}}</span>
+          {{upstream}}
         </span>
         <span class="update" v-else>
-          <span class="lastUpdate">初次同步中...</span>
+          初次同步中...
         </span>
       </div>
     </div>
@@ -91,8 +91,17 @@ export default {
     return {
       isMouseOver: false,
       isModalVisible: false,
-      infoMap: MirrorDetail,
-    };
+      infoMap: MirrorDetail
+    }
+  },
+  computed: {
+    infoMapAfter: function() {
+      let infoMap = this.infoMap
+      if (this.name.length && !Object.prototype.hasOwnProperty.call(infoMap, this.name)){
+        infoMap[this.name]={}
+      }
+      return infoMap
+    }
   },
   methods: {
     genSourceUrl: function() {

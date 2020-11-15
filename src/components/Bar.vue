@@ -12,7 +12,7 @@ export default {
   name: "Bar",
   methods: {
     listUpdate: choice => {
-      EventBus.$emit("listUpdateMsg", choice);
+      EventBus.$emit("list-update-msg", choice);
     }
   }
 };

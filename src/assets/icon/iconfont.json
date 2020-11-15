@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "18229050",
+      "name": "homebrew",
+      "font_class": "homebrew",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "11155484",
+      "name": "manjaro",
+      "font_class": "manjaro",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "13148035",
+      "name": "docker",
+      "font_class": "docker",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "5439370",
       "name": "centos",
       "font_class": "centos",

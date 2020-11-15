@@ -89,6 +89,18 @@
             "icon": "icon-pypi",
             "help": "pypi-mirror-howto",
             "fill": "#4277a6"
+        },
+        "homebrew":{
+            "icon": "icon-homebrew"
+        },
+        "docker-ce":{
+            "icon": "icon-docker"
+        },
+        "manjaro-cd": {
+            "icon": "icon-manjaro"
+        },
+        "dockerhub": {
+            "icon": "icon-docker"
         }
     }
 }

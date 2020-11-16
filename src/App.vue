@@ -25,9 +25,9 @@ export default {
 </script>
 
 <style lang="stylus">
-// @media (prefers-color-scheme: light)
 @import 'assets/theme/normal.styl';
 body
+  margin 0
   background-color $main-bg
 #app
   display flex
@@ -43,7 +43,6 @@ body, h2, a
   color: $main-font;
 
 #header
-  width: 100%;
   padding: 36px 96px 24px 96px;
 
 .main-wrapper

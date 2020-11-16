@@ -56,20 +56,17 @@
         <svg v-else class="iconfont">
         <use xlink:href="#icon-question-circle-fill"></use>
       </svg>
-      <a-tooltip trigger="click" title="已复制源地址">
-        <div 
-          v-clipboard:copy="genSourceUrl()"
-          v-clipboard:success="copy"
+      <div 
+        v-clipboard:copy="genSourceUrl()"
+        v-clipboard:success="copy"
+      >
+        <svg 
+          class="iconfont icon-i"
+          id="i-copy"
         >
-          <svg 
-            class="iconfont icon-i"
-            id="i-copy"
-          >
-          <use xlink:href="#icon-file-copy-fill"></use>
-        </svg>
-        </div>
-       
-      </a-tooltip>
+        <use xlink:href="#icon-file-copy-fill"></use>
+      </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -116,7 +113,8 @@ export default {
       }`;
     },
     copy: function() {
-      event.stopPropagation();
+      event.stopPropagation()
+      window.alert("源地址复制成功")
     }
   },
 };

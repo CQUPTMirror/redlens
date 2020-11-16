@@ -24,8 +24,11 @@ export default {
   .btn 
     font-size 16px
     margin 0 5px
-  
-  a:hover
-    color $accent
+  a
+    text-decoration none
+    cursor pointer
+    &:hover
+      transition all .2s
+      color $accent
 
 </style>

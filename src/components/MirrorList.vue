@@ -114,6 +114,7 @@ export default {
   background-color: $float-bg;
   border: none;
   height: 144px;
+  box-sizing border-box
 
 .mirror-container
   display grid

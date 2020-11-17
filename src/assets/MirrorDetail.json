@@ -91,7 +91,8 @@
             "fill": "#4277a6"
         },
         "homebrew":{
-            "icon": "icon-homebrew"
+            "icon": "icon-homebrew",
+            "help": "homebrew-mirror-howto"
         },
         "docker-ce":{
             "icon": "icon-docker"

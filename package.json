@@ -6,26 +6,25 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   },
   "dependencies": {
-    "ant-design-vue": "^1.7.2",
-    "core-js": "^3.7.0",
+    "@soerenmartius/vue3-clipboard": "^0.1.0",
+    "core-js": "^3.8.1",
     "stylus-loader": "^3.0.2",
-    "vue": "^2.6.12",
-    "vue-clipboard2": "^0.3.1"
+    "vue": "^3.0.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.8",
-    "@vue/cli-plugin-eslint": "^4.5.8",
-    "@vue/cli-service": "^4.5.8",
-    "axios": "^0.21.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^7.13.0",
-    "eslint-plugin-vue": "^7.1.0",
-    "stylus": "^0.54.7",
-    "vue-template-compiler": "^2.6.12"
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "@vue/compiler-sfc": "^3.0.4",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.16.0",
+    "eslint-plugin-vue": "^7.3.0",
+    "stylus": "^0.54.8"
   },
   "eslintConfig": {
     "root": true,
@@ -33,7 +32,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
     "rules": {},

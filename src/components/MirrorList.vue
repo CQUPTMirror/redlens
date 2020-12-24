@@ -26,7 +26,6 @@
 
 <script>
 import MirrorCard from "./MirrorCard.vue";
-import { EventBus } from "../main.js" 
 
 export default {
   name: "MirrorList",
@@ -99,7 +98,7 @@ export default {
     window.addEventListener('resize', this.onResize)
   },
   mounted() {
-    EventBus.$on('list-update-msg', (choice) => {
+    this.$bus.on('list-update-msg', (choice) => {
           this.choice = choice
     })
     

@@ -113,7 +113,8 @@
             "icon": "icon-manjaro"
         },
         "dockerhub": {
-            "icon": "icon-docker"
+            "icon": "icon-docker",
+            "help": "dockerhub-mirror-howto"
         }
     }
 }

@@ -7,12 +7,11 @@
 </template>
 
 <script>
-import { EventBus } from "../main.js";
 export default {
   name: "Bar",
   methods: {
-    listUpdate: choice => {
-      EventBus.$emit("list-update-msg", choice);
+    listUpdate(choice) { 
+      this.$bus.trigger("list-update-msg", choice)
     }
   }
 };

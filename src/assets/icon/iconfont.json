@@ -6,11 +6,39 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "11155591",
+      "name": "proxmox",
+      "font_class": "proxmox",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "10974548",
+      "name": "alpinelinux-logo",
+      "font_class": "alpine",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "19184521",
+      "name": "openwrt",
+      "font_class": "openwrt",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
       "icon_id": "18229050",
       "name": "homebrew",
       "font_class": "homebrew",
       "unicode": "e612",
       "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "19184482",
+      "name": "homebrew",
+      "font_class": "homebrew-bottles",
+      "unicode": "edd4",
+      "unicode_decimal": 60884
     },
     {
       "icon_id": "11155484",

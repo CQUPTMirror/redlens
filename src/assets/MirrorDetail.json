@@ -90,9 +90,21 @@
             "help": "pypi-mirror-howto",
             "fill": "#4277a6"
         },
+        "alpine":{
+            "icon": "icon-alpine"
+        },
+        "openwrt":{
+            "icon": "icon-openwrt"
+        },
+        "proxmox":{
+            "icon": "icon-proxmox"
+        },
         "homebrew":{
             "icon": "icon-homebrew",
             "help": "homebrew-mirror-howto"
+        },
+        "homebrew-bottles":{
+            "icon": "icon-homebrew-bottles"
         },
         "docker-ce":{
             "icon": "icon-docker"

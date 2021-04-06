@@ -106,6 +106,18 @@
         "homebrew-bottles":{
             "icon": "icon-homebrew-bottles"
         },
+        "ubuntu-ports":{
+            "icon": "icon-ubuntu"
+        },
+        "ubuntukylin":{
+            "icon": "icon-ubuntukylin"
+        },
+        "centos-altarch":{
+            "icon": "icon-centos"
+        },
+        "aosp-monthly":{
+            "icon": "icon-aosp"
+        },
         "docker-ce":{
             "icon": "icon-docker"
         },

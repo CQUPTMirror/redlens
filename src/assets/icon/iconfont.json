@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7171550",
+      "name": "picto-ubuntukylin",
+      "font_class": "ubuntukylin",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "13470293",
+      "name": "android",
+      "font_class": "aosp",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
       "icon_id": "11155591",
       "name": "proxmox",
       "font_class": "proxmox",

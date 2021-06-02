@@ -12,8 +12,6 @@ module.exports = {
     'vue'
   ],
   rules: {
-    'no-console': 'error',
-    'no-debugger': 'error',
     // 超过两个属性以上的元素必须换行
     'vue/max-attributes-per-line': ['error', {
       'singleline': 2,

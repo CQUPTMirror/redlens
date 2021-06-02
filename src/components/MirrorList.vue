@@ -32,7 +32,7 @@
       :md="6"
       :sm="24"
       :xs="24">
-      <right-side-bar />
+      <right-side-bar v-model:mirrorQ="mirrorQ" />
     </a-col>
   </a-row>
 </template>
@@ -50,6 +50,7 @@ export default defineComponent({
   },
   data () {
     return {
+      mirrorQ: '',
       mirrorData: [],
       proxyData: [],
       isShrinked: false,
@@ -59,7 +60,7 @@ export default defineComponent({
   computed: {
     mirrorDataFilter () {
       return this.mirrorData.filter(
-        value => value.is_master && value.status !== 'paused'
+        value => value.is_master && value.status !== 'paused' && value.name.includes(this.mirrorQ)
       )
     }
   },

@@ -23,7 +23,7 @@
       <a-button type="primary" onclick="modal()">获取镜像&gt;</a-button>
     </div>
     <div id="report">
-      <a href="https://github.com/CQUPTMirror/Report" style="text-decoration-line: none"><h3>反馈建议</h3></a>
+      <a href="https://github.com/CQUPTMirror/Report" style="text-decoration-line: none;"><h3>反馈建议</h3></a>
       <p>Bug或申请开新的镜像请提issue</p>
       <p><a href="https://github.com/CQUPTMirror/Report/issues/new">提交issue</a></p>
     </div>
